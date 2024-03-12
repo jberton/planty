@@ -9,5 +9,289 @@ Version: 1.0.0
 */
 /* Placer votre CSS ci-dessous */
 
+/* Couleur et positions des boutons dans le menu */
+#primary-site-navigation-desktop, #ast-hf-menu-1, #menu-item-41, #menu-item-40{
+	height:80px;
+}
 
+.ast-mobile-header-wrap .ast-primary-header-bar,.ast-primary-header-bar .site-primary-header-wrap {
+                 min-height:80px; 
+            }
+
+.MenuColorNousRencontrer a {
+	color:black !important;
+	background-color : white !important;
+	font-size: 16px !important;
+}
+.MenuColorNousRencontrer a:hover {
+	font-weight: 600 !important;
+	font-size: 16px !important;
+}
+
+.MenuColorCommander {
+	width: 236px;
+	background-color :  var(--ast-global-color-1);
+	}
 	
+.MenuColorCommander a{
+	color:white !important;
+	}	
+	
+.MenuColorCommander a:hover{
+	background-color : var(--ast-global-color-2)!important;
+	}
+	
+#content {margin-top:-20px !important;}
+	
+.main-header-menu > .menu-item > .menu-link, #astra-footer-menu > .menu-item > .menu-link {
+	justify-content:space-around !important;
+}
+
+
+/* Page Accueil - Centrer images GOUTS */
+body .is-layout-flex{
+	justify-content:center;
+}
+
+
+/* Page Nous rencontrer - Bouton formulaire */
+.envoyer-nous-rencontrer {
+	width: 200px !important;
+	color: white !important;
+	margin-left: 30%;
+	background-color: #E0B9B4 !important;
+	border-radius: 10px !important;
+}
+
+/* Page Nous rencontrer - Formulaire - Mise en forme label*/
+.wpcf7-form label{
+	font-size: 20px !important;
+	line-height: 15px !important;
+	margin-bottom : 20px !important;
+	}
+
+/* Page Nous rencontrer - Formulaire - Espacer label*/
+.wpcf7-form label span{
+	margin-top: 10px !important;
+	}
+	
+	.envoyer-nous-rencontrer input {
+	border-radius : 10px !important;
+	}
+	.wpcf7-form label textarea {
+	border-radius : 10px !important;
+	}
+	
+.wpcf7-form {
+		display:flex;
+		flex-direction: column;
+	}
+	
+#wpcf7-f372-p2-o1 {
+	width: 78% !important;
+}
+
+/* Page Commander - Taille des séparateurs */
+.separateur-commander{
+	max-width:900px !important;
+	}
+.separateur-commander2{
+	max-width:900px !important;
+	margin-bottom:50px !important;
+	}
+	
+/* Page Commander - Formulaire partie Commande - conteneur global*/	
+.commander-quantite {
+	display:flex;
+	flex-direction: row;
+	gap:30px;
+}
+/* Page Commander - Formulaire partie Commande - conteneur image et input quantité*/	
+.commander {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Page Commander - Formulaire partie Commande - conteneur image*/
+.container-fruit{
+    height: 130px;
+	width:200px;
+	display:flex;
+	background-size: cover;
+	flex-direction:column;
+	justify-content:center;
+}
+
+/* Page Commander - Formulaire partie Commande - texte sur image*/
+.text-fruit{
+	color:white;
+	width:200px;
+	text-align:center;
+	font-size:20px;
+	line-height: 25px;
+	font-weight:700;
+	padding: 10px 25px 10px;
+	}
+	
+
+/* Page Commander - Formulaire partie Commande - Taille champs saisie*/	
+.saisie-qte {
+	width: 45px !important;
+	margin:auto;
+	font-size:20px;
+	appearance: none;
+	margin-top:20px;
+}
+
+.saisie-qte input{
+	height: 60px !important;
+	border-radius: 0 !important;
+}
+
+/* Page Commander - Formulaire partie Commande - Retirer les flèches des inputs number*/	
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+	
+/* Page Commander - Formulaire partie Vos informations & Livraison */
+#formulaire-commander {
+	max-width:900px;
+	margin:0 auto;
+    width:100%;
+	margin-bottom: 80px;
+}
+
+.vos-info-livraison{
+	display:flex;
+	flex-direction:row;
+}
+
+.vos-info{
+	display:flex;
+	flex-direction:column;
+	width:50%;
+}
+
+.livraison{
+	display:flex;
+	flex-direction:column;
+	width:50%;
+}
+
+.rang-form {
+	width: 100%;
+}
+.demi-colonne, .colonne {
+	float: left;
+	color:white;
+	font-size:20px;
+	position: relative;
+	padding: 0.65rem;
+	width:100%;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.demi-colonne span, .colonne span{
+	margin-top:10px;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Page Commander - Formulaire - Séparateur vertical entre 2 colonnes  */
+.colonne {
+	border-right: solid;
+	}
+
+/* Page Commander - Formulaire - Séparateur vertical entre 2 colonnes  */
+.colonne2 {
+	padding-left: 60px;
+	}
+
+/* Page Commander - Formulaire - bouton commander */
+.envoyer-commander input{
+	color: white !important;
+	margin-left: 60px !important;
+	margin-bottom: 60px !important;
+	background-color: #E0B9B4 !important;
+	border-radius: 10px !important;
+}
+
+.envoyer-commander{
+	text-align: center !important;
+}
+
+/* Page Commander - Formulaire - Titre demi-colonne */
+.titre-colonne > .demi-colonne{
+	color:white;
+	font-size:30px !important;
+	font-weight:600 !important;
+	padding-bottom: 20px;
+}
+
+/* Page Commander - Formulaire - Taille champs de saisie*/
+.rang-form input:not([type=submit]) {
+	width: 383px !important;
+	min-height: 71px !important;
+}
+
+
+
+
+/* Page Commander - Formulaire responsive */
+/**---------------- Media query ----------------**/
+
+/* Partie Commande sur une seule colonne */
+@media (max-width: 900px) {
+		.commander-quantite{
+		display:flex;
+		flex-direction:column;
+		}
+		/* Titre Votre commande */
+		.wp-elements-75c8fcca97e69a61073dad8680db863f{
+			text-align:center;
+			}
+		/* Titre Commander */
+		.wp-elements-d0581936fd31e89c72b68cda63bd7ff6{
+			font-size:30px !important;
+			margin-top:110px !important;
+		}
+}
+
+/* Partie Vos informations & Livraison sur une seule colonne */
+@media (max-width: 900px) {
+		.vos-info-livraison{
+		display:flex;
+		flex-direction:column;
+		}
+
+		.rang-form{
+		text-align: center;
+		}
+		
+		.vos-info, .livraison{
+			align-items:center;
+			width:100%;
+		}
+		
+		.colonne {
+			border-right: none;
+			}
+			
+		.colonne2 {
+			padding-left: 10px;
+			}
+}
