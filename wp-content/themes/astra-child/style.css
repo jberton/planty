@@ -9,25 +9,47 @@ Version: 1.0.0
 */
 /* Placer votre CSS ci-dessous */
 
-/* Couleur et positions des boutons dans le menu */
-#primary-site-navigation-desktop, #ast-hf-menu-1, #menu-item-41, #menu-item-40{
-	height:80px;
+		
+/* ordre des items du menu */
+.main-header-menu{
+	display:flex;
+	flex-direction:row;
+}
+.main-header-menu :nth-child(1) { order: 1; }
+.main-header-menu :nth-child(2) { order: 3; }
+.main-header-menu :nth-child(3) { order: 2; }
+
+/* supprimer la marge à droite du menu */
+#masthead .ast-container{
+	padding-right:0;
+}
+.ast-container{
+	padding-right:0;
+	padding-left:0;
 }
 
-.ast-mobile-header-wrap .ast-primary-header-bar,.ast-primary-header-bar .site-primary-header-wrap {
-                 min-height:80px; 
-            }
 
+/* position items menu Nous rencontrer & Admin */
+.MenuColorNousRencontrer{
+	display:flex;
+	align-items:center;
+	width: 150px;
+}
+
+/* liens du menu Nous rencontrer & Admin */
 .MenuColorNousRencontrer a {
 	color:black !important;
 	background-color : white !important;
 	font-size: 16px !important;
+	padding:0 !important;
 }
+/* liens du menu Nous rencontrer & Admin au survol */
 .MenuColorNousRencontrer a:hover {
 	font-weight: 600 !important;
 	font-size: 16px !important;
 }
 
+/* item menu Commander */
 .MenuColorCommander {
 	width: 236px;
 	background-color :  var(--ast-global-color-1);
@@ -47,12 +69,10 @@ Version: 1.0.0
 	justify-content:space-around !important;
 }
 
-
 /* Page Accueil - Centrer images GOUTS */
 body .is-layout-flex{
 	justify-content:center;
 }
-
 
 /* Page Nous rencontrer - Bouton formulaire */
 .envoyer-nous-rencontrer {
@@ -295,3 +315,56 @@ input[type=number] {
 			padding-left: 10px;
 			}
 }
+
+/* Menu Burger Responsive */
+/**---------------- Media query ----------------**/
+
+@media (min-width: 0px) and (max-width: 920px) {
+	.site-header-focus-item{
+		justify-content:center;
+	}
+}
+
+/* Menu Burger alignement texte Admin */
+@media (min-width: 0px) and (max-width: 920px) {
+	.MenuColorNousRencontrer{
+		background-color:white;
+		}
+	/* Taille du menu */
+	#menu-item-40, #menu-item-41, #menu-item-42{
+		height:50px;
+		min-height:50px; 
+	}
+	/* Alignement gauche texte du menu */
+	.MenuColorNousRencontrer a{
+		margin-left:25px !important;
+	}
+	#menu-item-42 a{
+		margin-left:15px !important; 
+	}
+}
+
+@media (min-width: 920px) {
+	/* centrer texte Admin */
+	.MenuColorNousRencontrer{
+		 justify-content:center !important;
+		}
+		
+	/* Taille du menu */
+	#menu-item-41, #menu-item-40, #menu-item-42{
+		height:80px;
+		min-height:80px; 
+	}
+	/* Taille du menu */
+	.ast-mobile-header-wrap .ast-primary-header-bar,.ast-primary-header-bar .site-primary-header-wrap {
+		min-height:80px;
+	}
+}
+
+
+/* Footer Responsive */
+/**---------------- Media query ----------------**/
+@media (min-width: 0px) and (max-width: 1200px) {
+	.site-footer{
+		margin-top:60px;
+		}

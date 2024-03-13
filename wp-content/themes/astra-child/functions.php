@@ -13,22 +13,14 @@ function theme_enqueue_styles() {
 }
 
 
-//Si l'utilisateur se connecte
-    function check_login( $user_login, $user ) {
-        
-		
-		echo "<script type='text/javascript'>alert('test');</script>";
-        
-    }
-    add_action('wp_login', 'check_login', 10, 2);
-
-
-//Si l'utilisateur se déconnecte
-    function unlog( $user_login, $user ) {
-        
-        
-    }
-    add_action('wp_logout', 'unlog', 10, 2);
-
-
+//Ajouter Admin au menu si l'utilisateur est connecté
+	add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2 );
+	function add_extra_item_to_nav_menu( $items, $args ) {
+		if (is_user_logged_in()) {
+			if ($args->theme_location == 'primary' || $args->theme_location == 'mobile_menu') {
+			$items .= '<li class="MenuColorNousRencontrer" id="menu-item-42"><a href="../planty/wp-Admin/">Admin</a></li>';
+			}
+		}
+		return $items;
+	}
 ?>
