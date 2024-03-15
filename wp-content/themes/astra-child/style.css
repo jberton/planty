@@ -28,7 +28,6 @@ Version: 1.0.0
 	padding-left:0;
 }
 
-
 /* position items menu Nous rencontrer & Admin */
 .MenuColorNousRencontrer{
 	display:flex;
@@ -36,41 +35,61 @@ Version: 1.0.0
 	width: 150px;
 }
 
-/* liens du menu Nous rencontrer & Admin */
+/* MENU - Nous rencontrer & Admin */
 .MenuColorNousRencontrer a {
 	color:black !important;
 	background-color : white !important;
 	font-size: 16px !important;
 	padding:0 !important;
 }
-/* liens du menu Nous rencontrer & Admin au survol */
+/* MENU - Nous rencontrer & Admin - Au survol */
 .MenuColorNousRencontrer a:hover {
 	font-weight: 600 !important;
 	font-size: 16px !important;
 }
+/* MENU - Nous rencontrer & Admin - Page active */
+.MenuColorNousRencontrer.current_page_item {
+	font-weight: 600 !important;
+	font-size: 16px !important;
+}
 
-/* item menu Commander */
+/* MENU - Commander */
 .MenuColorCommander {
 	width: 236px;
 	background-color :  var(--ast-global-color-1);
 	}
-	
 .MenuColorCommander a{
 	color:white !important;
-	}	
-	
+	}
+/* MENU - Commander - Au survol */
 .MenuColorCommander a:hover{
 	background-color : var(--ast-global-color-2)!important;
 	}
-	
+/* MENU - Commander - Page active */
+.MenuColorCommander.current_page_item {
+	background-color : var(--ast-global-color-2)!important;
+}
+/* MENU	- Aligner le bas du menu sur contenu de la page */
 #content {margin-top:-20px !important;}
-	
-.main-header-menu > .menu-item > .menu-link, #astra-footer-menu > .menu-item > .menu-link {
+
+/* MENU	- Centrer */
+.main-header-menu > .menu-item > .menu-link {
 	justify-content:space-around !important;
 }
 
 /* Page Accueil - Centrer images GOUTS */
-body .is-layout-flex{
+.images-gouts{
+	justify-content:center;
+}
+
+/* Page Accueil - Centrer les temoignages */
+.bloc-temoignages .is-layout-flex{
+	display:flex;
+	justify-content:center !important;
+}
+
+/* Page Nous rencontrer - Centrer images équipe */
+.blocs-equipe{
 	justify-content:center;
 }
 
@@ -78,38 +97,39 @@ body .is-layout-flex{
 .envoyer-nous-rencontrer {
 	width: 200px !important;
 	color: white !important;
-	margin-left: 30%;
+	margin: auto;
+	margin-top:20px;
 	background-color: #E0B9B4 !important;
 	border-radius: 10px !important;
+	background-color : var(--ast-global-color-1)!important;
+}
+/* Page Nous rencontrer - Bouton formulaire - Au survol*/
+.envoyer-nous-rencontrer:hover {
+	background-color : var(--ast-global-color-2)!important;
 }
 
-/* Page Nous rencontrer - Formulaire - Mise en forme label*/
+/* Page Nous rencontrer - Formulaire - Mise en forme des champs de saisie label et input*/
 .wpcf7-form label{
 	font-size: 20px !important;
-	line-height: 15px !important;
-	margin-bottom : 20px !important;
+	padding-bottom: 20px;
 	}
-
-/* Page Nous rencontrer - Formulaire - Espacer label*/
-.wpcf7-form label span{
-	margin-top: 10px !important;
+	.champs-nom-email input{
+		height: 60px !important;
 	}
-	
+	.wpcf7-form label span{
+		margin-top: 10px !important;
+		}
 	.envoyer-nous-rencontrer input {
-	border-radius : 10px !important;
+		border-radius : 10px !important;
 	}
 	.wpcf7-form label textarea {
-	border-radius : 10px !important;
+		border-radius : 10px !important;
 	}
-	
-.wpcf7-form {
+	.wpcf7-form {
 		display:flex;
 		flex-direction: column;
-	}
-	
-#wpcf7-f372-p2-o1 {
-	width: 78% !important;
-}
+		}
+
 
 /* Page Commander - Taille des séparateurs */
 .separateur-commander{
@@ -141,6 +161,18 @@ body .is-layout-flex{
 	background-size: cover;
 	flex-direction:column;
 	justify-content:center;
+	color:white;
+	font-size:20px;
+	margin-bottom:20px;
+	font-weight:700;
+	text-align:center;
+	line-height: 25px !important;
+	padding: 10px 25px 10px;
+}
+
+/* Page Commander - Formulaire partie Commande - centrer input quantité*/
+.commander > .wpcf7-form-control-wrap{
+	text-align:center;
 }
 
 /* Page Commander - Formulaire partie Commande - texte sur image*/
@@ -156,15 +188,12 @@ body .is-layout-flex{
 	
 
 /* Page Commander - Formulaire partie Commande - Taille champs saisie*/	
-.saisie-qte {
+.commander input{
 	width: 45px !important;
 	margin:auto;
 	font-size:20px;
 	appearance: none;
-	margin-top:20px;
-}
-
-.saisie-qte input{
+	margin-bottom:20px;
 	height: 60px !important;
 	border-radius: 0 !important;
 }
@@ -186,7 +215,6 @@ input[type=number] {
 	max-width:900px;
 	margin:0 auto;
     width:100%;
-	margin-bottom: 80px;
 }
 
 .vos-info-livraison{
@@ -225,12 +253,6 @@ input[type=number] {
 	margin-top:10px;
 }
 
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
 /* Page Commander - Formulaire - Séparateur vertical entre 2 colonnes  */
 .colonne {
 	border-right: solid;
@@ -244,14 +266,24 @@ input[type=number] {
 /* Page Commander - Formulaire - bouton commander */
 .envoyer-commander input{
 	color: white !important;
-	margin-left: 60px !important;
 	margin-bottom: 60px !important;
 	background-color: #E0B9B4 !important;
 	border-radius: 10px !important;
 }
+/* Page Commander - Formulaire - bouton commander - Au survol */
+.envoyer-commander input:hover{
+	background-color : var(--ast-global-color-2)!important;
+}
 
 .envoyer-commander{
 	text-align: center !important;
+	margin-top:50px;
+}
+
+/* Page Commander - Formulaire - droite bouton commander masquer spinner */
+.wpcf7-spinner{
+	margin:0;
+	width:0;
 }
 
 /* Page Commander - Formulaire - Titre demi-colonne */
@@ -264,7 +296,7 @@ input[type=number] {
 
 /* Page Commander - Formulaire - Taille champs de saisie*/
 .rang-form input:not([type=submit]) {
-	width: 383px !important;
+	width: 90% !important;
 	min-height: 71px !important;
 }
 
@@ -272,7 +304,7 @@ input[type=number] {
 
 
 /* Page Commander - Formulaire responsive */
-/**---------------- Media query ----------------**/
+/**------------ Media query -------------**/
 
 /* Partie Commande sur une seule colonne */
 @media (max-width: 900px) {
@@ -292,6 +324,7 @@ input[type=number] {
 }
 
 /* Partie Vos informations & Livraison sur une seule colonne */
+/**---------------------- Media query ----------------------**/
 @media (max-width: 900px) {
 		.vos-info-livraison{
 		display:flex;
@@ -317,7 +350,7 @@ input[type=number] {
 }
 
 /* Menu Burger Responsive */
-/**---------------- Media query ----------------**/
+/**--------- Media query ---------**/
 
 @media (min-width: 0px) and (max-width: 920px) {
 	.site-header-focus-item{
@@ -326,6 +359,7 @@ input[type=number] {
 }
 
 /* Menu Burger alignement texte Admin */
+/**----------- Media query ----------**/
 @media (min-width: 0px) and (max-width: 920px) {
 	.MenuColorNousRencontrer{
 		background-color:white;
@@ -363,8 +397,38 @@ input[type=number] {
 
 
 /* Footer Responsive */
-/**---------------- Media query ----------------**/
+/**------------ Media query ------------**/
 @media (min-width: 0px) and (max-width: 1200px) {
 	.site-footer{
 		margin-top:60px;
 		}
+}
+		
+		
+/* Page Accueil - Premier Titre */
+/**------------ Media query ------------**/
+@media (min-width: 0px) and (max-width: 1200px) {
+	.titre-accueil{
+		margin-top:120px !important;
+		margin-bottom:40px !important;
+		font-size:25px !important;
+		}
+}
+
+/* Page Nous rencontrer - Premier Titre */
+/**------------ Media query -----------**/
+@media (min-width: 0px) and (max-width: 1200px) {
+	.titre-nous-rencontrer{
+		font-size:25px !important;
+		margin-top:80px !important;
+		}
+}
+
+/* Page Commander - Premier Titre */
+/**------------ Media query ------------**/
+@media (min-width: 0px) and (max-width: 1200px) {
+	.titre-commander{
+		font-size:25px !important;
+		margin-top:120px !important;
+		}
+}

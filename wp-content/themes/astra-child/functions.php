@@ -12,15 +12,12 @@ function theme_enqueue_styles() {
 	add_filter('wpcf7_autop_or_not', '__return_false');
 }
 
-
-//Ajouter Admin au menu si l'utilisateur est connecté
+//Ajouter l'item Admin au menu si l'utilisateur est connecté
 	add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2 );
 	function add_extra_item_to_nav_menu( $items, $args ) {
-		if (is_user_logged_in()) {
-			if ($args->theme_location == 'primary' || $args->theme_location == 'mobile_menu') {
-			$items .= '<li class="MenuColorNousRencontrer" id="menu-item-42"><a href="../planty/wp-Admin/">Admin</a></li>';
+		if (is_user_logged_in() && ($args->theme_location == 'primary' || $args->theme_location == 'mobile_menu')) {
+			$items .= '<li class="MenuColorNousRencontrer" id="menu-item-42"><a href='. admin_url() .'>Admin</a></li>';
 			}
-		}
 		return $items;
 	}
 ?>
